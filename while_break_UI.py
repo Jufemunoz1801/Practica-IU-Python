@@ -23,7 +23,16 @@ tortuga2.speed(1.3)
 
 meta = 300
 
-while True:
+linea_meta =turtle.Turtle()
+linea_meta.penup()
+linea_meta.goto(meta,150)
+linea_meta.pendown()
+linea_meta.goto(meta, -150)
+linea_meta.hideturtle()
+
+
+
+"""while True:#ejemplo con break
     avance_tortuga1 = random.randint(1,20)
     avance_tortuga2 = random.randint(1,20)
     
@@ -35,6 +44,24 @@ while True:
     
     if (tortuga1.xcor() >= meta or tortuga2.xcor() >= meta):
         break
+"""
+
+while True:
+    
+    avance_tortuga1 = random.randint(1,20)
+    avance_tortuga2 = random.randint(1,20)
+    
+    if avance_tortuga1 % 2 == 0 or avance_tortuga2 % 2 == 0:
+        continue
+    tortuga1.forward(avance_tortuga1)
+    tortuga2.forward(avance_tortuga2)
+    
+    print(f'El caracol 1 avanza {avance_tortuga1}')
+    print(f'El caracol 2 avanza {avance_tortuga2}\n')
+    
+    if (tortuga1.xcor() >= meta or tortuga2.xcor() >= meta):
+        break
+
 
 
 if (tortuga1.xcor() > tortuga2.xcor()):
