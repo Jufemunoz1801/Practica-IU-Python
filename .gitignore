@@ -7,4 +7,5 @@ while.py
 diccionario.py
 indexing.py
 continue.py
-.venv
+_venv
+indexing_slicing.py
